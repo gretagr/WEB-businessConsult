@@ -1,0 +1,87 @@
+.main
+  header
+    display: flex
+    background:
+      color: #1C1C1C
+    @include tablet
+      flex-wrap: wrap
+      height: 100vh
+
+    .main-heading
+      position: relative
+      z-index: 1
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      justify-content: flex-end
+      order: 0
+      width: 42vw
+      @include tablet
+        padding-top: 20px
+        height: auto
+        justify-content: flex-start
+        order: 1
+      @include smallPhone
+        width: 100%
+
+      h1
+        line-height: 1em
+        margin: 0 0 30px 15%
+        font-size: 8vw
+        color: white
+        @include smallPhone
+          font-size: 2.6em
+          line-height: 1.1em
+          margin: 0 0 15px 15%
+      span
+        color: #F6FF01
+        font-size: 11vw
+        @include smallPhone
+          font-size: 1.45em
+
+      .line-divider
+        background-color: #6937E6
+        height: 1.5vw
+        width: 120%
+        margin-bottom: 80px
+        @include tablet
+          margin: 0
+        @include smallPhone
+          width: 80%
+
+    .image-gallery
+      display: flex
+      flex-wrap: wrap
+      order: 1
+      width: 58vw
+      @include tablet
+        flex-wrap: nowrap
+        width: 100%
+        height: auto
+        order: 0
+
+      .gallery-item
+        display: block
+        height: 50vh
+        &:nth-child(1)
+          width: 65%
+          background:
+            image: url("images/1.jpg")
+            size: cover
+        &:nth-child(2)
+          width: 35%
+          background:
+            image: url("images/6.jpg")
+            size: cover
+        &:nth-child(3)
+          width: 80%
+          background:
+            image: url("images/5.jpg")
+            size: cover
+        &:nth-child(4)
+          width: 20%
+          &:hover
+            flex-grow: 3
+          background:
+            image: url("images/9.jpg")
+            size: cover

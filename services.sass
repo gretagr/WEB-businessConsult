@@ -1,0 +1,59 @@
+.main
+  .our-services
+    display: flex
+    height: 60vh
+    padding: 10vw 0
+    @include phone
+      flex-wrap: wrap
+      height: 100%
+    .our-services-heading
+      padding-top: 8%
+      width: 40%
+      min-width: 350px
+      background-color: #6937E6
+      @include phone
+        width: 85%
+        display: flex
+        flex-direction: column
+      @include smallPhone
+        width: 100%
+      h2
+        line-height: 5.5vw
+        font-size: 5vw
+        padding-left: 40%
+        margin: 2% 0
+        color: white
+        @include phone
+          width: 50%
+          font-size: 3em
+          line-height: 1em
+          align-self: flex-end
+          padding-left: 0
+        @include smallPhone
+          align-self: flex-start
+          padding-left: 10%
+    .our-services-list
+      width: 60%
+      min-width: 390px
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      @include phone
+        padding: 30px 0
+    li
+      font-size: 1.8vw
+      height: calc(60vh / 7)
+      border-bottom: 1px solid #ccc
+      width: 100%
+      margin-left: 10%
+      line-height: calc(60vh / 7)
+      &:nth-child(7n)
+        border-bottom: 0px
+      @include tablet
+        font-size: 1em
+      span
+        color: #ccc
+        font-weight: bold
+        padding-right: 4%

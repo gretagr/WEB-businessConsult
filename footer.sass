@@ -1,0 +1,121 @@
+.main
+  .know-us
+    height: 100vh
+    width: 100vw
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    background:  linear-gradient(-45deg, rgba(113, 55, 228, 0.8) 1%, rgba(76, 56, 229, 0.8) 100%), url("images/12.jpg")
+    background-size: cover
+
+    img
+      display: block
+      width: 10vw
+      margin: 5vh auto 10vh auto
+
+    h1
+      width: 100%
+      font-size: 8vw
+      color: #F6FF01
+      text-align: center
+      margin: 0
+      @include tablet
+        font-size: 4em
+
+  footer
+    display: flex
+    width: 100vw
+    height: 100vh
+    background: linear-gradient(-45deg, rgba(87,55,228,1) 0%, rgba(123,54,219,1) 49%, rgba(123,54,219,1) 99%)
+    @include smallDesktop
+      flex-direction: column
+      justify-content: center
+    @include phone
+      height: 100%
+      padding: 10% 0
+    .footer-heading
+      display: flex
+      align-items: center
+      align-self: center
+      justify-content: flex-end
+      height: 60%
+      width: 35%
+      background: linear-gradient(-45deg, rgba(105,101,255,0.5) 0%, rgba(125,64,255,0.5) 99%)
+      @include smallDesktop
+        align-self: flex-end
+        justify-content: flex-start
+        width: 80vw
+        height: auto
+      @include smallPhone
+        width: 100vw
+        margin-bottom: 10%
+
+      h2
+        line-height: 1.8em
+        font-size: 1.6em
+        color: white
+        padding-right: 30px
+        font-weight: 400
+        @include smallDesktop
+          padding-left: 38px
+        span
+          font-weight: bold
+          color: #F6FF01
+          font-size: 1.7em
+
+    .form
+      display: flex
+      align-items: center
+      align-self: center
+      height: 60%
+      @include smallPhone
+        align-self: flex-start
+      span
+        color: #717171
+        font-size: 1.5em
+        font-weight: bold
+
+      hr
+        border: none
+        border-top: 1px solid #717171
+        width: 100%
+
+      form
+        height: 60%
+        margin-left: 10%
+        width: 65vw
+        @include smallPhone
+          min-width: 100vw
+        button
+          background-color: #F6FF01
+          border: none
+          height: 50px
+          width: 150px
+          margin-top: 50px
+          font-size: 1.5em
+          font-weight: 700
+        .input-group
+          display: inline-block
+          position: relative
+          input
+            display: inline-block
+            background-color: transparent
+            border: none
+            height: 50px
+            color: #F6FF01
+            font-size: 1.5em
+            padding-left: 20px
+            &:focus,
+            &:active
+              outline: none
+          label
+            pointer-events: none
+            position: absolute
+            left: 15%
+            top: 8px
+            color: #717171
+            font-size: 1.5em
+          input:focus + label,
+          input.has-value + label
+            top: -10px
+            font-size: 0.9em
